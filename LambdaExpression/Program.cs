@@ -16,13 +16,31 @@ namespace LambdaExpression
             {
                 new Person(){SSN=1, Name="Khushi", Address="Rajasthan", Age=26},
                 new Person(){SSN=1, Name="Raj", Address="gujrat", Age=28},
-                new Person(){SSN=1, Name="Harish", Address="Delhi", Age=20},
-                new Person(){SSN=1, Name="Thia", Address="Mumbai", Age=21},
+                new Person(){SSN=1, Name="Harish", Address="Delhi", Age=16},
+                new Person(){SSN=1, Name="Thia", Address="Mumbai", Age=14},
                 new Person(){SSN=1, Name="Ramesh", Address="Pune", Age=62},
 
             };
-            DisplayPersonDeta(list);
-            PersonDetaManagement.RetreiveTop2RecordsBasedOnLessAge(list);
+
+            Console.WriteLine("please choose any program");
+            Console.WriteLine("1.Display person data\n2.Top 2 records age less than 60\n3.Records of age between 13 to 18");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch(option)
+            {
+                case 1:
+                    DisplayPersonDeta(list);
+                    break;
+                case 2:
+                    PersonDetaManagement.RetreiveTop2RecordsBasedOnLessAge(list);
+                    break;
+                case 3:
+                    PersonDetaManagement.RetreiveTeenageRecords(list);
+                    break;
+                default:
+                    break;
+            }
+            
+           
             Console.ReadLine();
         }
 

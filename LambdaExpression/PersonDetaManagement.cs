@@ -26,5 +26,14 @@ namespace LambdaExpression
             Console.WriteLine("\nTop two records which has age less than 60");
             Program.DisplayPersonDeta(Top2Records);
         }
+
+        public static void RetreiveTeenageRecords(List<Person> list)
+        {
+            List<Person>TeenageRecords=list.Where(Person=>Person.Age>13 && Person.Age<18).ToList();
+            Console.WriteLine("\nrecords which has age in between 13 to 18");
+            Program.DisplayPersonDeta(TeenageRecords);
+
+        }
     }
+    
 }
