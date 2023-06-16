@@ -34,6 +34,12 @@ namespace LambdaExpression
             Program.DisplayPersonDeta(TeenageRecords);
 
         }
+        public static void RetreiveAvaregeAgeRecords(List<Person> list)
+        {
+            double AverageRecords=list.Average(Person=>Person.Age);
+            Console.WriteLine("\nrecords of average age in list");
+            Console.WriteLine(AverageRecords);
+        }
     }
     
 }

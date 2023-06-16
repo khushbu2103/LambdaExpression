@@ -23,7 +23,10 @@ namespace LambdaExpression
             };
 
             Console.WriteLine("please choose any program");
-            Console.WriteLine("1.Display person data\n2.Top 2 records age less than 60\n3.Records of age between 13 to 18");
+            Console.WriteLine("1.Display person data\n" +
+                "2.Top 2 records age less than 60\n" +
+                "3.Records of age between 13 to 18\n" +
+                "4.Records of average age in list");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -35,6 +38,9 @@ namespace LambdaExpression
                     break;
                 case 3:
                     PersonDetaManagement.RetreiveTeenageRecords(list);
+                    break;
+                case 4:
+                    PersonDetaManagement.RetreiveAvaregeAgeRecords(list);
                     break;
                 default:
                     break;
