@@ -40,6 +40,19 @@ namespace LambdaExpression
             Console.WriteLine("\nrecords of average age in list");
             Console.WriteLine(AverageRecords);
         }
+
+        public static void RetreivePersonRecordBasedOnName(List<Person> list, string personName)
+        {
+            List<Person> PersonData = list.Where(Person => Person.Name==personName).ToList();
+            if(PersonData.Count>0 )
+            {
+                Console.WriteLine("{0} is present in the list", personName);
+            }
+            else
+            {
+                Console.WriteLine("{0} is not present in the list", personName);
+            }
+        }
     }
     
 }
