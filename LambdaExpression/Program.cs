@@ -27,7 +27,8 @@ namespace LambdaExpression
                 "2.Top 2 records age less than 60\n" +
                 "3.Records of age between 13 to 18\n" +
                 "4.Records of average age in list\n" +
-                "5.Person record based on name");
+                "5.Person record based on name\n" +
+                "6.Skip age less than 60");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -45,6 +46,9 @@ namespace LambdaExpression
                     break;
                 case 5:
                     PersonDetaManagement.RetreivePersonRecordBasedOnName(list, "This");
+                    break;
+                case 6:
+                    PersonDetaManagement.SkipAgeLessThan60(list);
                     break;
                 default:
                     Console.WriteLine("Invalid program");
