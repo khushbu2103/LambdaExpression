@@ -22,6 +22,7 @@ namespace LambdaExpression
 
             };
             DisplayPersonDeta(list);
+            PersonDetaManagement.RetreiveTop2RecordsBasedOnLessAge(list);
             Console.ReadLine();
         }
 
